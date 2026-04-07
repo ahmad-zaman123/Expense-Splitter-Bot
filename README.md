@@ -85,39 +85,3 @@ Settlements:
 ```bash
 npm start
 ```
-
-For local webhook testing, expose your server using a tunneling tool to get a public HTTPS URL, then set it as your webhook in the Meta Developer Dashboard.
-
-### Deployment
-
-The bot is deployed on [Replit](https://replit.com). You can also deploy to any Node.js-compatible platform (Railway, Render, Fly.io, etc.).
-
-After deployment, go to **Meta Developer Dashboard → WhatsApp → Configuration** and set:
-- **Callback URL:** `https://your-app-url/webhook`
-- **Verify Token:** same value as your `VERIFY_TOKEN`
-
-Then subscribe to the **`messages`** webhook field.
-
-## Project Structure
-
-```
-whatsapp-expense-bot/
-├── server.js          # Express server, webhook handler, message logic
-├── core/
-│   └── splitter.js    # Pure expense splitting algorithm
-├── .env.example       # Environment variable template
-└── package.json
-```
-
-## Environment Variables
-
-| Variable | Description |
-|----------|-------------|
-| `WHATSAPP_TOKEN` | Meta access token (from API Setup — expires every 24h on test) |
-| `PHONE_NUMBER_ID` | Your WhatsApp Business phone number ID |
-| `VERIFY_TOKEN` | Secret string you choose for webhook verification |
-| `PORT` | Server port (default: 3000) |
-
-## License
-
-ISC
