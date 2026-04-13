@@ -22,9 +22,9 @@ A WhatsApp bot that splits expenses among a group of people and calculates who o
 
 **Example:**
 ```
-add Ali 1000
-add Ahmad 500
-add Sara 500
+add John 1000
+add Mark 500
+add Steve 500
 split
 ```
 
@@ -36,8 +36,8 @@ split
 📊 Share:  PKR 666.67 each
 
 Settlements:
-➡️ Ahmad pays Ali: PKR 166.67
-➡️ Sara pays Ali: PKR 166.67
+➡️ Mark pays John: PKR 166.67
+➡️ Steve pays John: PKR 166.67
 ```
 
 ## Tech Stack

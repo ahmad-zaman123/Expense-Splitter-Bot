@@ -101,9 +101,9 @@ function handleMessage(phone, text) {
       "👋 Welcome to *Expense Splitter Bot*!\n\n" +
       "Here's how to use me:\n\n" +
       "1️⃣ Add people:\n" +
-      "   `add Ali 1000`\n" +
-      "   `add Ahmad 500`\n" +
-      "   `add Sara 500`\n\n" +
+      "   `add John 1000`\n" +
+      "   `add Mark 500`\n" +
+      "   `add Steve 500`\n\n" +
       "2️⃣ See your list:\n" +
       "   `list`\n\n" +
       "3️⃣ Calculate who owes whom:\n" +
@@ -123,7 +123,7 @@ function handleMessage(phone, text) {
       return (
         '⚠️ Invalid format. Use:\n' +
         '`add <Name> <Amount>`\n\n' +
-        'Example: `add Ali 1000`'
+        'Example: `add John 1000`'
       );
     }
 
