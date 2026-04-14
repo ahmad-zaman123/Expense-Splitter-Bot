@@ -1,10 +1,20 @@
-# WhatsApp Expense Splitter Bot
+# Expense Splitter Bot
 
-A WhatsApp bot that splits expenses among a group of people and calculates who owes whom. Built with Node.js and the Meta WhatsApp Business API.
+An expense splitter that calculates who owes whom in a group. Available on two surfaces:
+
+- **WhatsApp** — powered by the Meta WhatsApp Business Cloud API
+- **Web chat** — a React + Vite frontend that talks to the same backend
+
+Both surfaces share the same message handler, so commands behave identically.
+
+## Links
+
+- **Live Demo:** _coming soon_
+- **Replit:** _coming soon_
 
 ## Features
 
-- Add people and their expenses via simple WhatsApp commands
+- Add people and their expenses via simple chat commands
 - Automatically calculates equal share per person
 - Shows exactly who needs to pay whom and how much
 - Per-user session management (each user has their own expense list)
@@ -40,10 +50,32 @@ Settlements:
 ➡️ Steve pays John: PKR 166.67
 ```
 
+## Project Structure
+
+```
+expense-splitter-bot/
+├── backend/     # Node.js + Express server, WhatsApp webhook, core splitter logic
+└── frontend/    # React + Vite web chat UI
+```
+
+## Running Locally
+
+Backend:
+```
+cd backend
+npm install
+npm run dev
+```
+
+Frontend:
+```
+cd frontend
+npm install
+npm run dev
+```
+
 ## Tech Stack
 
-- **Runtime:** Node.js
-- **Framework:** Express.js
+- **Backend:** Node.js, Express, Axios
+- **Frontend:** React 18, Vite
 - **API:** Meta WhatsApp Business Cloud API
-- **HTTP Client:** Axios
-

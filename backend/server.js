@@ -5,10 +5,12 @@
 
 require("dotenv").config();
 const express = require("express");
+const cors    = require("cors");
 const axios   = require("axios");
 const { splitExpenses } = require("./core/splitter");
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 const {
@@ -202,6 +204,27 @@ function handleMessage(phone, text) {
     "Send `hi` to see all available commands."
   );
 }
+
+// ─────────────────────────────────────────────
+// REST API for the web chat frontend
+// Same handleMessage powers both surfaces.
+// ─────────────────────────────────────────────
+app.post("/api/message", (req, res) => {
+  const { sessionId, text } = req.body || {};
+  if (!sessionId || typeof text !== "string") {
+    return res.status(400).json({ error: "sessionId and text are required" });
+  }
+  const reply = handleMessage(sessionId, text);
+  res.json({ reply });
+});
+
+app.post("/api/reset", (req, res) => {
+  const { sessionId } = req.body || {};
+  if (sessionId) delete sessions[sessionId];
+  res.json({ ok: true });
+});
+
+app.get("/api/health", (_req, res) => res.json({ ok: true }));
 
 // ─────────────────────────────────────────────
 // STEP 4: Send a WhatsApp Message
