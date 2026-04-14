@@ -9,7 +9,7 @@ No spreadsheets. No sign-ups. Just chat.
 ## Demo
 
 <p align="center">
-  <img src="docs/demo.gif" alt="Expense Splitter Bot demo" width="360" />
+  <img src="docs/demo.gif" alt="Expense Splitter Bot demo" width="200" />
 </p>
 
 ## Why
