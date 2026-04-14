@@ -4,6 +4,8 @@ Settle group expenses over **WhatsApp** or a **web chat** with a single command.
 
 No spreadsheets. No sign-ups. Just chat.
 
+🔗 **Live demo:** https://expense-splitter-bot-kgsa.vercel.app
+
 ## Demo
 
 <!-- Drop your demo video here. To embed an MP4, drag-drop the file into a GitHub issue/PR, copy the generated URL, and paste it below. -->
@@ -118,7 +120,3 @@ expense-splitter-bot/
 - **Backend:** Node.js serverless functions (Vercel), Upstash Redis
 - **Frontend:** React 18, Vite
 - **Messaging:** Meta WhatsApp Business Cloud API
-
-## Links
-
-- **Live Demo:** https://expense-splitter-bot-kgsa.vercel.app/
