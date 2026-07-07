@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 const API = import.meta.env.VITE_API_URL || "";
 const SESSION_KEY = "splitter.sessionId";
@@ -254,6 +255,7 @@ export default function App() {
           </button>
         </form>
       </div>
+      <Analytics />
     </div>
   );
 }
